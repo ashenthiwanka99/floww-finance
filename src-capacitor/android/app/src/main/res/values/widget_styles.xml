@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WidgetText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/widget_text</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="WidgetText.Label">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/widget_text_muted</item>
+    </style>
+
+    <style name="WidgetText.Small">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/widget_text_muted</item>
+    </style>
+
+    <style name="WidgetText.Body">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="WidgetText.Strong">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="WidgetText.Value">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="WidgetText.Unit">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/widget_text_muted</item>
+    </style>
+
+    <style name="WidgetText.Lead">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+</resources>

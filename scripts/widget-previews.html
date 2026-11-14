@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Floww widget previews</title>
+<style>
+  :root {
+    --bg: #ffffff; --text: #0a0a0a; --muted: #5d6168; --hue: #1d5fbf; --pale: #b9cdee;
+    --track: #eceef2; --rule: #eef0f3; --control: #d0d4da; --negative: #c4242a;
+  }
+  :root[data-theme='dark'] {
+    --bg: #17181b; --text: #eceef1; --muted: #a6abb3; --hue: #5b95ea; --pale: #2c4772;
+    --track: #222327; --rule: #232428; --control: #4a4d53; --negative: #f2665f;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: transparent; }
+  body { font-family: 'Widget Sans', Roboto, system-ui, sans-serif; color: var(--text); padding: 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+  .w { background: var(--bg); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; overflow: hidden; }
+  .w--budget { width: 352px; height: 208px; }
+  .w--small { width: 176px; height: 176px; }
+  .num { font-variant-numeric: tabular-nums; }
+  .head { display: flex; align-items: center; height: 18px; }
+  .mark { width: 16px; height: 16px; flex: none; }
+  .label { font-size: 12px; line-height: 16px; color: var(--muted); }
+  .head .label { flex: 1; margin-left: 8px; font-size: 13px; }
+  .days { font-size: 12px; line-height: 16px; color: var(--muted); }
+  .w--small .days { font-size: 11px; margin-left: auto; }
+  .lead { display: flex; align-items: baseline; gap: 4px; margin-top: 4px; }
+  .unit { font-size: 18px; font-weight: 500; color: var(--muted); }
+  .amount { font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em; }
+  .w--small .lead { gap: 3px; margin-top: 0; height: 36px; align-items: baseline; }
+  .w--small .unit { font-size: 13px; }
+  .w--small .amount { font-size: 28px; line-height: 36px; }
+  .bar { height: 8px; border-radius: 4px; background: var(--track); display: flex; overflow: hidden; margin-top: 10px; }
+  .w--small .bar { height: 6px; margin-top: 8px; }
+  .bar span { height: 100%; }
+  .bar .out { background: var(--hue); }
+  .bar .due { background: var(--pale); }
+  .grow { flex: 1; }
+  .rule { height: 1px; background: var(--rule); flex: none; }
+  .figs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 10px; }
+  .figs > div + div { border-left: 1px solid var(--rule); padding-left: 12px; }
+  .key { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 0; }
+  .key--in { background: var(--track); box-shadow: inset 0 0 0 1px var(--control); }
+  .key--out { background: var(--hue); }
+  .key--due { background: var(--pale); }
+  .figs .label { font-size: 11px; line-height: 14px; }
+  .value { font-size: 14px; line-height: 18px; font-weight: 500; margin-top: 2px; }
+  .next { display: flex; align-items: baseline; gap: 8px; margin-top: 8px; font-size: 13px; line-height: 18px; }
+  .next .when { font-size: 12px; color: var(--muted); }
+  .next .name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .next .amt { font-weight: 500; }
+  .sub { font-size: 11px; line-height: 14px; color: var(--muted); margin-top: 6px; }
+  .kv { display: flex; align-items: baseline; gap: 8px; font-size: 12px; line-height: 16px; margin-top: 4px; }
+  .kv .k { flex: 1; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kv .v { font-weight: 500; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="mark" viewBox="0 0 28 28">
+      <rect width="28" height="28" rx="8" fill="#1d5fbf"/>
+      <path d="M6 11c2.2 0 2.2 6 4.4 6s2.2-6 4.4-6 2.2 6 4.4 6 2.2-6 2.8-6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <section id="budget" class="w w--budget">
+    <div class="head"><svg class="mark"><use href="#mark"/></svg><span class="label">Left to spend</span><span class="days num">14 days left</span></div>
+    <div class="lead"><span class="unit">LKR</span><span class="amount num">269,815</span></div>
+    <div class="bar"><span class="out" style="width: 30.9%"></span><span class="due" style="width: 20.9%"></span></div>
+    <div class="grow"></div>
+    <div class="rule"></div>
+    <div class="figs">
+      <div><p class="label"><span class="key key--in"></span>Moved in</p><p class="value num">390,260</p></div>
+      <div><p class="label"><span class="key key--out"></span>Paid out</p><p class="value num">120,445</p></div>
+      <div><p class="label"><span class="key key--due"></span>Unpaid</p><p class="value num">81,640</p></div>
+    </div>
+    <div class="rule" style="margin-top: 10px"></div>
+    <div class="next"><span class="when">Due 27 Oct</span><span class="name">Home Wi-Fi, SLT Fibre</span><span class="amt num">6,490</span></div>
+  </section>
+
+  <section id="left" class="w w--small">
+    <div class="head"><svg class="mark"><use href="#mark"/></svg><span class="days num">14 days left</span></div>
+    <div class="grow"></div>
+    <p class="label">Left to spend</p>
+    <div class="lead"><span class="unit">LKR</span><span class="amount num">269,815</span></div>
+    <div class="bar"><span class="out" style="width: 30.9%"></span><span class="due" style="width: 20.9%"></span></div>
+    <p class="sub num">of 390,260 moved in</p>
+  </section>
+
+  <section id="spending" class="w w--small">
+    <div class="head"><svg class="mark"><use href="#mark"/></svg><span class="days num">14 days left</span></div>
+    <div class="grow"></div>
+    <p class="label">Total spending</p>
+    <div class="lead"><span class="unit">LKR</span><span class="amount num">62,544</span></div>
+    <div class="rule" style="margin-top: 10px"></div>
+    <div class="kv" style="margin-top: 8px"><span class="k">Most on Groceries</span><span class="v num">21,840</span></div>
+    <div class="kv"><span class="k num">5 unpaid</span><span class="v num">81,640</span></div>
+  </section>
+</body>
+</html>

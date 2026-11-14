@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#141414</color>
+    <color name="colorPrimaryDark">#F2F4F7</color>
+    <color name="colorAccent">#1D5FBF</color>
+    <color name="splash_bg">#F2F4F7</color>
+    <color name="ground_light">#F2F4F7</color>
+    <color name="ground_dark">#0E0F11</color>
+
+    <color name="widget_bg">#FFFFFF</color>
+    <color name="widget_text">#0A0A0A</color>
+    <color name="widget_text_muted">#5D6168</color>
+    <color name="widget_hue">#1D5FBF</color>
+    <color name="widget_hue_pale">#B9CDEE</color>
+    <color name="widget_track">#ECEEF2</color>
+    <color name="widget_rule">#EEF0F3</color>
+    <color name="widget_control">#D0D4DA</color>
+    <color name="widget_negative">#C4242A</color>
+    <color name="widget_mark">#1D5FBF</color>
+</resources>

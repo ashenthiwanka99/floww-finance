@@ -1,0 +1,33 @@
+{
+  "appId": "com.floww.finance",
+  "appName": "Floww",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 600,
+      "backgroundColor": "#F2F4F7",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DEFAULT",
+      "backgroundColor": "#F2F4F7",
+      "overlaysWebView": false
+    },
+    "GoogleAuth": {
+      "scopes": [
+        "profile",
+        "email"
+      ],
+      "serverClientId": "YOUR_WEB_CLIENT_ID.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  },
+  "android": {
+    "backgroundColor": "#F2F4F7",
+    "overScrollMode": "never",
+    "webContentsDebuggingEnabled": false
+  }
+}

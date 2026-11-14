@@ -1,0 +1,22 @@
+rules_version = '2';
+
+// Floww cloud-sync stores one document per user at /users/{uid} containing
+// the full financial dataset. Only the authenticated owner may read/write it.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      // No nested collections are used today; deny by default if added later.
+      match /{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Everything else is denied.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

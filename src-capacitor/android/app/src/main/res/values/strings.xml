@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Floww</string>
+    <string name="title_activity_main">Floww</string>
+    <string name="package_name">com.floww.finance</string>
+    <string name="custom_url_scheme">com.floww.finance</string>
+    <string name="server_client_id">YOUR_WEB_CLIENT_ID.apps.googleusercontent.com</string>
+    <string name="widget_name">Budget</string>
+    <string name="widget_description">Left to spend, paid out and unpaid, and the next bill</string>
+    <string name="widget_small_budget_name">Left to spend</string>
+    <string name="widget_small_budget_desc">What is left of this cycle\'s money</string>
+    <string name="widget_small_spending_name">Spending</string>
+    <string name="widget_small_spending_desc">Spending this cycle and what is still unpaid</string>
+</resources>

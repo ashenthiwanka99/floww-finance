@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#0E0F11</color>
+    <color name="splash_bg">#0E0F11</color>
+
+    <color name="widget_bg">#17181B</color>
+    <color name="widget_text">#ECEEF1</color>
+    <color name="widget_text_muted">#A6ABB3</color>
+    <color name="widget_hue">#5B95EA</color>
+    <color name="widget_hue_pale">#2C4772</color>
+    <color name="widget_track">#222327</color>
+    <color name="widget_rule">#232428</color>
+    <color name="widget_control">#4A4D53</color>
+    <color name="widget_negative">#F2665F</color>
+</resources>

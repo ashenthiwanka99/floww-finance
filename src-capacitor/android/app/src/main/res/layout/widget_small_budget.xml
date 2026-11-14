@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:clipToOutline="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_widget_mark"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/wsb_days"
+            style="@style/WidgetText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="end"
+            android:text="" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        style="@style/WidgetText.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Left to spend" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/WidgetText.Unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="LKR" />
+
+        <TextView
+            android:id="@+id/wsb_amount"
+            style="@style/WidgetText.Lead"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:textSize="28sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeMaxTextSize="28sp"
+            android:autoSizeStepGranularity="1sp"
+            android:text="-" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp">
+
+        <ProgressBar
+            android:id="@+id/wsb_bar_base"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="6dp"
+            android:maxHeight="6dp"
+            android:indeterminate="false"
+            android:max="1000"
+            android:progress="0"
+            android:progressDrawable="@drawable/widget_bar_base" />
+
+        <ProgressBar
+            android:id="@+id/wsb_bar_plan"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="6dp"
+            android:maxHeight="6dp"
+            android:indeterminate="false"
+            android:max="1000"
+            android:progress="0"
+            android:secondaryProgress="0"
+            android:progressDrawable="@drawable/widget_bar_plan" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/wsb_sub"
+        style="@style/WidgetText.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Open Floww to load" />
+</LinearLayout>
